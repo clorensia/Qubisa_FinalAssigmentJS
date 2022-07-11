@@ -23,7 +23,7 @@ nav .logo{
     width: 160px;
     cursor: pointer;
 }
-nav .btn{
+nav .button{
     text-decoration: none;
     color: #fff;
     background: #333;
@@ -46,7 +46,7 @@ nav .btn{
     max-width: 380px;
     font-weight: 500;
     font-size: 14px;
-    color: #333S;
+    color: #333;
 }
 .content h3{
     margin-top: 30px;
