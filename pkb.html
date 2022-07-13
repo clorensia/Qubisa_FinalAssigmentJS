@@ -7,6 +7,80 @@
     <title>PKB</title>
 </head>
 <body>
-    
+    <!-- var motor = ["Harga Kendaraan: " + cbr, "BBN KB: " + bbnkn, "SWDKLLJ: " + swdkllj, "Biaya Adminitrasi STNK: " + stnk, "Biaya Biro 10%: " + biro]
+    var i = 0
+    var text = ""
+    for (; motor[i];) {
+        text += motor[i] + "<br>" + "<br>"
+        i++
+    } -->
+    <!-- (A) HTML FORM -->
+<form onsubmit="return tcalc();">
+    <table>
+      <!-- (A) ITEM PRICE -->
+      <tr>
+        <td>Harga Kendaraan</td>
+        <td>
+          <input type="number" min="0" max="99999999"
+                 id="taxprice" required value="200000000"/>
+        </td>
+      </tr>
+   
+  
+      <!-- (B) TAX PERCENTAGE -->
+      <tr>
+        <td>BBN KB</td>
+        <td>
+          <input type="number" min="1" max="100" step="1"
+                 id="taxperc" required value="10"/>
+        </td>
+      </tr>
+   
+      <!-- (C) TAXABLE AMOUNT -->
+      <tr>
+        <td>Tax Amount</td>
+        <td>
+          <input type="text" readonly id="taxamt"/>
+        </td>
+      </tr>
+   
+      <!-- (D) TOTAL WITH TAX -->
+      <tr>
+        <td>Total With Tax</td>
+        <td>
+          <input type="text" readonly id="taxgrand"/>
+        </td>
+      </tr>
+    </table>
+   
+    <!-- (E) GO! -->
+    <input type="submit" value="Go!"/>
+  </form>
+  <script>
+    function tcalc () {
+      // (A) ITEM PRICE + TAX PERCENTAGE
+      var price = document.getElementById("taxprice").value,
+          percent = document.getElementById("taxperc").value;
+      price = parseFloat(price);
+      percent = parseFloat(percent);
+     
+      // (B) CALCULATE TAX AMOUNT
+      var tax = (price / 100) * percent,
+          grand = price * ((100 + percent) / 100);
+     
+      // (C) ROUND OFF
+      // CREDITS - https://www.jacklmoore.com/notes/rounding-in-javascript/
+      var roundoff = function (amount, places) {
+        let ea = "e" + places,
+        eb = "e-" + places;
+        return Number(Math.round(amount + ea) + eb);
+      };
+     
+      // (D) SET CALCULATED VALUES TO HTML FIELDS
+      document.getElementById("taxamt").value = tax;
+      document.getElementById("taxgrand").value = grand;
+      return false;
+    }
+    </script>
 </body>
 </html>
