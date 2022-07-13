@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honda</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      box-sizing: border-box;
+    }
+    .container {
+      width: 100%;
+      height: 100vh;
+      background-image: url(./Image/white.png);
+      background-size: cover;
+      background-position: unset;
+      background-repeat: no-repeat;
+      padding: 30px 10%;
+    }
+    nav {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav .logo {
+      width: 160px;
+      cursor: pointer;
+    }
+    nav .button {
+      text-decoration: none;
+      color: #fff;
+      background: #333;
+      padding: 15px 50px;
+      border-radius: 30px;
+    }
+    .content {
+      margin-top: 10%;
+    }
+    .content h2 {
+      color: black;
+      font-size: 50px;
+    }
+    .content h1 {
+      font-size: 50px;
+      color: #222;
+      margin-top: 10px;
+    }
+    .content p {
+      max-width: 380px;
+      font-weight: 500;
+      font-size: 14px;
+      color: #333;
+    }
+    .content h3 {
+      margin-top: 30px;
+      font-weight: 600;
+      font-size: 24px;
+    }
+    .colour-select div {
+      background: #333;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .colour-select {
+      display: flex;
+      margin-top: 30px;
+    }
+    .colour-select #white {
+      background: whitesmoke;
+    }
+    .colour-select #black {
+      background: black;
+    }
+    .colour-select #blue {
+      background: blue;
+    }
+  </style>
+  <body>
+    <div class="container" id="bike">
+      <nav>
+        <a href="../../../Yamaha.html">
+          <img src="../../logo.svg" class="logo" alt="logo" />
+        </a>
+      </nav>
+      <h3 id="demo"></h3>
+      <div class="content">
+        <h2>Yamaha</h2>
+        <h1>Mio-M3</h1>
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, nostrum?</p>
+        <h3>Variasi Warna</h3>
+        <div class="colour-select">
+          <div id="white"></div>
+          <div id="black"></div>
+          <div id="blue"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      let whiteBtn = document.getElementById("white");
+      let blackBtn = document.getElementById("black");
+      let blueBtn = document.getElementById("blue");
+      // let bike = document.getElementById("bike");
+
+      whiteBtn.onclick = function () {
+        bike.style.backgroundImage = "url(./Image/white.png)";
+        const cbr = 32000000;
+        const bbnkn = 320000;
+        const swdkllj = 35000;
+        const stnk = 100000;
+        const biro = 150000;
+        var motor = [
+          "Harga Kendaraan: " + cbr,
+          "BBN KB: " + bbnkn,
+          "SWDKLLJ: " + swdkllj,
+          "Biaya Adminitrasi STNK: " + stnk,
+          "Biaya Biro 10%: " + biro,
+        ];
+        var i = 0;
+        var text = "";
+        for (; motor[i]; ) {
+          text += motor[i] + "<br>" + "<br>";
+          i++;
+        }
+        document.getElementById("demo").innerHTML = text;
+      };
+
+      blackBtn.onclick = function () {
+        bike.style.backgroundImage = "url(./Image/blck.png)";
+        const cbr = 33000000;
+        const bbnkn = 330000;
+        const swdkllj = 35000;
+        const stnk = 150000;
+        const biro = 200000;
+        var motor = [
+          "Harga Kendaraan: " + cbr,
+          "BBN KB: " + bbnkn,
+          "SWDKLLJ: " + swdkllj,
+          "Biaya Adminitrasi STNK: " + stnk,
+          "Biaya Biro 10%: " + biro,
+        ];
+        var i = 0;
+        var text = "";
+        for (; motor[i]; ) {
+          text += motor[i] + "<br>" + "<br>";
+          i++;
+        }
+        document.getElementById("demo").innerHTML = text;
+      };
+      blueBtn.onclick = function () {
+        bike.style.backgroundImage = "url(./Image/blue.png)";
+        const cbr = 34000000;
+        const bbnkn = 340000;
+        const swdkllj = 50000;
+        const stnk = 100000;
+        const biro = 200000;
+        var motor = [
+          "Harga Kendaraan:   " + cbr,
+          "BBN KB:   " + bbnkn,
+          "SWDKLLJ: " + swdkllj,
+          "Biaya Adminitrasi STNK: " + stnk,
+          "Biaya Biro 10%: " + biro,
+        ];
+        var i = 0;
+        var text = "";
+        for (; motor[i]; ) {
+          text += motor[i] + "<br>" + "<br>";
+          i++;
+        }
+        document.getElementById("demo").innerHTML = text;
+      };
+    </script>
+  </body>
+</html>

@@ -1,42 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<style>
-    .gallery{
-        display: grid;
-        grid-template-areas: 
-            "img1 img3 img2"
-            "img1 img3 img4"      
-            "img5 img6 img6";
-    }
-    .img1 {
-        grid-area: img1;
-    }
-    .img2 {
-        grid-area: img2;
-    }
-    .img3 {
-        grid-area: img3;
-    }
-    .img4 {
-        grid-area: img4;
-    }
-    .img5 {
-        grid-area: img5;
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <!-- https://xstore.8theme.com/demos/hosting/-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <title>Motor</title>
+  </head>
+  <style>
+    .slider {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      margin: auto;
+      overflow-x: scroll;
+      overflow-y: hidden;
     }
 
-</style>
-<body>
-    <div class="gallery">
-        <img class="img1" src="src/Merk/1.png" alt="1">
-        <img class="img2" src="src/Merk/2.png" alt="2">
-        <img class="img3" src="src/Merk/3.png" alt="3">
-        <img class="img4" src="src/Merk/4.png" alt="4">
-        <img class="img5" src="src/Merk/5.png" alt="5">
+    .slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .slider .slide {
+      display: flex;
+      position: absolute;
+      left: 0;
+      transition: 0.3s left ease-in-out;
+    }
+
+    .slider .item {
+      margin-right: 10px;
+    }
+
+    .slider .item:last-child {
+      margin-right: 0;
+    }
+
+    .ctrl {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .ctrl-btn {
+      padding: 20px 20px;
+      min-width: 50px;
+      background: #fff;
+      border: none;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+
+      position: absolute;
+      top: 50%;
+      margin-top: -27.5px;
+    }
+
+    .ctrl-btn.pro-prev {
+      left: 0;
+    }
+
+    .ctrl-btn.pro-next {
+      right: 0;
+    }
+  </style>
+  <body>
+    <!--Item slider text-->
+    <h1 class="text-center">Jenis Motor</h1>
+    <br>
+    <br>
+    <br>
+
+    <!-- Item slider-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <div class="carousel carousel-showmanymoveone slide" id="itemslider">
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="col-xs-12 col-sm-6 col-md-2">
+                  <a href="BMW.html"
+                    ><img
+                      src="src/Merk/1.svg"
+                      class="img-responsive center-block"
+                  /></a>
+                  <h4 class="text-center">BMW</h4>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-2">
+                  <a href="Suzuki.html"
+                    ><img
+                      src="src/Merk/2.svg"
+                      class="img-responsive center-block"
+                  /></a>
+                  <h4 class="text-center">Suzuki</h4>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-2">
+                  <a href="Honda.html"
+                    ><img
+                      src="src/Merk/3.svg"
+                      class="img-responsive center-block"
+                  /></a>
+                  <h4 class="text-center">Honda</h4>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-2">
+                  <a href="Yamaha.html"
+                    ><img
+                      src="src/Merk/4.svg"
+                      class="img-responsive center-block"
+                  /></a>
+                  <h4 class="text-center">Yamaha</h4>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-2">
+                  <a href="Kawasaki.html"
+                    ><img
+                      src="src/Merk/5.svg"
+                      class="img-responsive center-block"
+                  /></a>
+                  <h4 class="text-center">Kawasaki</h4>
+                </div>
+              </div>
+            </div>
+
+            <div id="slider-control">
+              <a
+                class="left carousel-control"
+                href="#itemslider"
+                data-slide="prev"
+                ><img
+                  src="https://cdn0.iconfinder.com/data/icons/website-kit-2/512/icon_402-512.png"
+                  alt="Left"
+                  class="img-responsive"
+              /></a>
+              <a
+                class="right carousel-control"
+                href="#itemslider"
+                data-slide="next"
+                ><img
+                  src="http://pixsector.com/cache/81183b13/avcc910c4ee5888b858fe.png"
+                  alt="Right"
+                  class="img-responsive"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+    <!-- Item slider end-->
+
+    <script>
+      $(document).ready(function () {
+        $("#itemslider").carousel({ interval: 3000 });
+
+        $(".carousel-showmanymoveone .item").each(function () {
+          var itemToClone = $(this);
+
+          for (var i = 1; i < 6; i++) {
+            itemToClone = itemToClone.next();
+
+            if (!itemToClone.length) {
+              itemToClone = $(this).siblings(":first");
+            }
+
+            itemToClone
+              .children(":first-child")
+              .clone()
+              .addClass("cloneditem-" + i)
+              .appendTo($(this));
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
