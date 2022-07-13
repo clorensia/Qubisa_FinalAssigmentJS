@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker</title>
+    <link rel="stylesheet" href="../../../motor.css">
+</head>
+
+<body>
+    <div class="container" id="bike">
+        <nav>
+            <img src="../../logo.svg" class="logo" alt="logo">
+        </nav>
+        <h3 id="demo"></h3>
+        <div class="content">
+            <h2>Kawasaki</h2>
+            <h1>W-175TR</h1>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, nostrum?</p>
+            <h3>Variasi Warna</h3>
+            <div class="colour-select">
+                <div id="red"></div>
+                <div id="black"></div>
+                <div id="orange"></div>
+            </div>
+            <script type="text/javascript">
+                let redBtn = document.getElementById("red");
+                let blackBtn = document.getElementById("black");
+                let orangeBtn = document.getElementById("orange");
+                // let bike = document.getElementById("bike");
+
+                redBtn.onclick = function () {
+                    bike.style.backgroundImage = "url(src/Kawasaki/Images/D-TRACKE/red.jpg)";
+                    const cbr = 35000000
+                    const bbnkn = 330000
+                    const swdkllj = 35000
+                    const stnk = 200000
+                    const biro = 250000
+                    var motor = ["Harga Kendaraan: " + cbr, "BBN KB: " + bbnkn, "SWDKLLJ: " + swdkllj, "Biaya Adminitrasi STNK: " + stnk, "Biaya Biro 10%: " + biro]
+                    var i = 0
+                    var text = ""
+                    for (; motor[i];) {
+                        text += motor[i] + "<br>" + "<br>"
+                        i++
+                    }
+                    document.getElementById("demo").innerHTML = text;
+                }
+
+                blackBtn.onclick = function () {
+                    bike.style.backgroundImage = "url(src/Kawasaki/D-TRACKET-SE/Image/blck.jpg)";
+                    const cbr = 40000000
+                    const bbnkn = 400000
+                    const swdkllj = 40000
+                    const stnk = 300000
+                    const biro = 300000
+                    var motor = ["Harga Kendaraan: " + cbr, "BBN KB: " + bbnkn, "SWDKLLJ: " + swdkllj, "Biaya Adminitrasi STNK: " + stnk, "Biaya Biro 10%: " + biro]
+                    var i = 0
+                    var text = ""
+                    for (; motor[i];) {
+                        text += motor[i] + "<br>" + "<br>"
+                        i++
+                    }
+                    document.getElementById("demo").innerHTML = text;
+                }
+
+                orangeBtn.onclick = function () {
+                    bike.style.backgroundImage = "url(src/Kawasaki/Images/D-TRACKER-SE/green.jpg)";
+                    const cbr = 38000000
+                    const bbnkn = 380000
+                    const swdkllj = 38000
+                    const stnk = 300000
+                    const biro = 300000
+                    var motor = ["Harga Kendaraan: " + cbr, "BBN KB: " + bbnkn, "SWDKLLJ: " + swdkllj, "Biaya Adminitrasi STNK: " + stnk, "Biaya Biro 10%: " + biro]
+                    var i = 0
+                    var text = ""
+                    for (; motor[i];) {
+                        text += motor[i] + "<br>" + "<br>"
+                        i++
+                    }
+                    document.getElementById("demo").innerHTML = text;
+                }
+            </script>
+        </div>
+</body>
+
+</html>
